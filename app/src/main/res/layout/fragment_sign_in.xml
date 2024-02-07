@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_green_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignInFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/g_v_80"
+        android:orientation="vertical"
+       app:layout_constraintGuide_percent=".80"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15"
+        android:id="@+id/g_h_15"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85"
+        android:id="@+id/g_h_85"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/cdMain"
+        app:cardElevation="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/g_h_15"
+        app:layout_constraintEnd_toEndOf="@id/g_v_80"
+        app:layout_constraintBottom_toBottomOf="@id/g_h_85"
+        android:elevation="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cg_v_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cg_h_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".20" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cg_h_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".30" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cg_h_40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".40" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cg_h_60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".60" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cg_h_75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".75" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSignIn"
+                android:text="@string/sign_in"
+                app:layout_constraintStart_toStartOf="@id/cg_v_10"
+                android:textSize="50sp"
+                android:layout_margin="@dimen/margin_10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/cg_h_20"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etUserName"
+                android:hint="@string/user_name"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cg_v_10"
+                app:layout_constraintTop_toTopOf="@id/cg_h_20"
+                app:layout_constraintBottom_toBottomOf="@id/cg_h_30"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="4dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPassword"
+                android:hint="@string/password"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                app:layout_constraintStart_toStartOf="@id/cg_v_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cg_h_30"
+                app:layout_constraintBottom_toBottomOf="@id/cg_h_40"
+                android:drawableLeft="@drawable/baseline_key_24"
+                android:drawablePadding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvForgetPass"
+                android:text="@string/tvForgetPass"
+                app:layout_constraintHorizontal_weight="1"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/green"
+                app:layout_constraintStart_toStartOf="@id/cg_v_10"
+                app:layout_constraintTop_toTopOf="@id/cg_h_40"
+                app:layout_constraintBottom_toBottomOf="@id/cg_h_60"
+                app:layout_constraintEnd_toStartOf="@id/ivArrow"
+                android:layout_margin="@dimen/margin_20dp"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/ivArrow"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_margin="@dimen/margin_10dp"
+                android:padding="@dimen/margin_10dp"
+                android:src="@drawable/baseline_arrow_circle_right_24"
+                app:layout_constraintStart_toEndOf="@id/tvForgetPass"
+                app:layout_constraintTop_toTopOf="@id/cg_h_40"
+                app:layout_constraintEnd_toEndOf="@id/cg_v_80"
+                app:layout_constraintBottom_toBottomOf="@id/cg_h_60"
+               />
+
+            <TextView
+                android:id="@+id/tvDontHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/donot_have_account"
+                app:layout_constraintBottom_toBottomOf="@id/cg_h_75"
+                app:layout_constraintEnd_toStartOf="@id/tvSignUp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/cg_v_10"
+                app:layout_constraintTop_toTopOf="@id/cg_h_60" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSignUp"
+                android:text="@string/sign_up"
+                app:layout_constraintStart_toEndOf="@id/tvDontHaveAccount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cg_h_60"
+                app:layout_constraintBottom_toBottomOf="@id/cg_h_75"
+                android:textSize="20dp"
+                android:textColor="@color/green"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cg_v_80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".80" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
